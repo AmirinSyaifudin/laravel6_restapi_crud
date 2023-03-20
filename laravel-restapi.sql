@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 16 Mar 2023 pada 04.17
+-- Waktu pembuatan: 20 Mar 2023 pada 04.20
 -- Versi server: 8.0.30
 -- Versi PHP: 7.4.30
 
@@ -173,7 +173,13 @@ INSERT INTO `posts` (`id`, `user_id`, `title`, `body`, `created_at`, `updated_at
 (19, 2, 'Nihil accusantium explicabo hic modi minima dignissimos.', 'Illo quod ad soluta sed neque voluptatem nulla nemo. Nam ut rerum velit voluptas qui quos excepturi. Laboriosam accusantium suscipit omnis ullam.', '2023-03-15 20:01:04', '2023-03-15 20:01:04'),
 (20, 5, 'In amet atque aut officiis rerum at.', 'Non similique voluptatem ea aut eaque non voluptatum rerum. Asperiores veniam voluptatibus nisi sapiente sed ut qui. Asperiores magni et qui quas. Natus tenetur velit at. Eligendi architecto recusandae vel.', '2023-03-15 20:01:04', '2023-03-15 20:01:04'),
 (23, 15, 'Tambah data ke 3 kopi klotok', 'kopi klotok', '2023-03-15 20:50:44', '2023-03-15 20:50:44'),
-(24, 10, 'Tambah data ke 4 kopi Jozzz', 'kopi Jozzzz', '2023-03-15 20:51:20', '2023-03-15 20:51:20');
+(24, 10, 'Tambah data ke 4 kopi Jozzz', 'kopi Jozzzz', '2023-03-15 20:51:20', '2023-03-15 20:51:20'),
+(25, 12, 'aku kamu kita', 'Totam quam nulla expedita eligendi facere hic porro. Deserunt pariatur at recusandae voluptatum. Quibusdam quia qui dolor exercitationem maiores dolorum cupiditate. Autem ea quam voluptatem. Facilis vel in ipsam qui esse minus. Eos et quia debitis magni officiis voluptatem.', '2023-03-16 08:33:50', '2023-03-16 08:33:50'),
+(26, 10, 'Texte kopi wkwkwkw', 'Update  wkwkw .', '2023-03-19 19:41:48', '2023-03-19 19:41:48'),
+(27, 10, 'krgtegdvdvd w', 'Update  wkwkw .', '2023-03-19 19:44:43', '2023-03-19 19:44:43'),
+(28, 10, 'k56767678egdvdvd w', 'Update  wkwkw .', '2023-03-19 19:46:43', '2023-03-19 19:46:43'),
+(29, 10, '12345huhow', 'Update  wkwkw .', '2023-03-19 19:47:13', '2023-03-19 19:47:13'),
+(30, 1, 'Quo123434vrt btgt', 'Totam quam nulla expedita eligendi facere hic porro. Deserunt pariatur at recusandae voluptatum. Quibusdam quia qui dolor exercitationem maiores dolorum cupiditate. Autem ea quam voluptatem. Facilis vel in ipsam qui esse minus. Eos et quia debitis magni officiis voluptatem.', '2023-03-19 21:07:49', '2023-03-19 21:07:49');
 
 -- --------------------------------------------------------
 
@@ -275,7 +281,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
