@@ -1,0 +1,137 @@
+
+Modul 1
+PERTEMUAN KE 2 
+KODE HAS DARI GITHUB = 383ef653db436a3a6a2afdc915ead998972b8587
+
+Modul 2
+PERTEMUAN KE 1
+bROWSER api EndPoint 
+- menampilkan data post 
+
+ROUTE 
+Route::get('/post','PostController@index');
+
+PostController 
+ public function index()
+    {
+        $data = Post::all();
+
+        return response()->json($data, 200);
+    }
+
+
+
+PERTEMUAN KE 2
+Read API Endpoint
+
+Route 
+Route::get('/post/{id}','PostController@show');
+PostController 
+  public function show($id)
+    {
+        $data   = Post::find($id);
+        
+        return response()->json($data, 200);
+    }
+
+
+PERTEMUAN KE 3
+Add API Endpoint 
+
+Route 
+Route::post('/post','PostController@store');
+
+PostController 
+ public function store(Request $request)
+    {
+        $data     = $request->all();
+        $response =  Post::create($data);
+
+        return response()->json($response, 201);
+
+    }
+
+PERTEMUAN KE 4
+Edit API Endpoint
+
+Route 
+Route::put('/post/{post}','PostController@update');
+
+PostController 
+public function update(Request $request, Post $post)
+    {
+        $post->update($request->all());
+        
+        return response()->json($post, 200);
+    }
+
+PERTEMUAN KE 5
+Detele API Endpoint
+
+Route 
+Route::delete('/post/{post}','PostController@destroy');
+
+PostController 
+public function destroy(Post $post)
+    {
+        $post->delete();
+
+        return response()->json($post, 200);
+    }
+
+
+Modul 3 
+Pertemuan ke 1 
+Custom Response Untuk data yang tidak di temukan 
+
+PostController
+ // kondisi jika data null maka akan ada notif
+            if (is_null($data)) {
+                return response()->json([
+                    'message'   => 'Data yang anda cari tidak ada !!! '
+                ], 404);
+            }
+
+
+Pertemuan ke 2 
+Menambahkan validasi beserta responsenya 
+PostController
+
+ // validasi 
+        $validator =  Validator::make($data, [
+            'title'   => ['required','min: 4']
+        ]);
+
+        // cek kondisi validasi kurang dari 4 karakter 
+        if ($validator->fails()) {
+            response()->json([
+                'error'   => $validator->errors()
+            ], 400);
+        }
+
+
+
+
+Modul ke 3
+Pertemuan ke 1 
+membuat Custom Response 
+Route 
+
+
+
+
+PostController 
+
+
+Post Model 
+
+
+pertemuan ke 2 
+
+
+peremuan ke 3 
+
+
+pertemuan ke 4 
+
+
